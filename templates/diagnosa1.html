@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/css/style2.css">
+    <!-- <link rel="stylesheet" href="../css/styles.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+    <!-- Start Title -->
+    <title>Skin Desease Detection</title>
+    <!-- End Title -->
+</head>
+<body>
+      <!-- Start Navbar -->
+      <div class="navbar">
+        <!-- Start Logo -->
+        <div class="logo-sec">
+            <h1><a href="{{url_for('home')}}" class="logos">MoonSkin</a></h1>
+        </div>
+        <!-- End Logo -->
+        <!-- Start Menu -->
+        <nav>
+            <div class="menu-bar">
+                <ul class="menu-item">
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('tutorial')}}" class="sub-item">Tutorial</a></li>
+                    <li><a href="{{url_for('about')}}" class="sub-item">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End Menu -->
+    </div>
+    <!-- End Navbar -->
+    <!-- Start Main -->
+    <main>
+        <div class="atas">
+            <!-- Start Teks -->
+        <section id="text">
+            <div class="box-text">
+                <h1>Lakukan Diagnosa</h1>
+            </div>
+                <p> Untuk melakukan diagnosa, silahkan upload foto kulit dari perangkat anda, atau anda ikuti langkah pengguaan pada tab Tutorial</p>
+        </section>
+        <!-- End Teks -->
+        <!-- Start Wadah Upload -->
+
+        <section class="upload-section">
+            <div class="input">
+                <!-- Start Image Preview -->
+                <div class="preview">
+                    <img id="preview-image">
+                    <form id="images" action="/diagnosa" method="POST" enctype="multipart/form-data" onsubmit="return cekImage(this)">
+                        <input type="file" name="image_kulit" id="file" accept=".jpeg, .jpg, .png"  style="display: none;" onchange="showPreview(event);">
+                        <input type="submit" id="submit" style="display: none;"  >
+                    </form>
+                    <!-- Start Button -->
+                    <div class="tombol">
+                        <section><label for="file" >Upload</label></section>
+                        <section><label for="submit" >Submit</label></section>
+                    </div>
+                    <!-- End Button -->
+                </div>
+                <!-- End Image Preview -->
+            </div>
+        </section>
+
+        <!-- End Wadah Upload -->
+        </div>
+        <!-- Start Hasil Prediksi -->
+        <div class="output">
+            <div>
+                <div class="box-text">
+                    <h1>Hasil Prediksi</h1>
+                </div>
+                <div class="out">
+                    <div class="input">
+                        {% if hasil_prediksi %}
+                        <p > <span><img src="../static/images/prediksi.jpeg" alt=""></span></p>
+                        <p class="hasil">Foto tersebut diperkirakan merupakan <span>{{nilai_kecocokan}}% {{hasil_prediksi}}</span></p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="peng">
+                    {% if hasil_prediksi %}
+                    <p class="has"><span>{{pengertian}}</span></p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <!-- End Hasil Prediksi -->
+    </main>
+    <!-- End Main -->
+</body>
+<!-- Start Resource JavaScript -->
+<script src="{{url_for('static', filename='js/js.js') }}"></script>
+<!-- End Resource JavaScript -->
+</body>
+</html>

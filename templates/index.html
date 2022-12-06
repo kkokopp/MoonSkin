@@ -1,0 +1,64 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <!-- <link rel="stylesheet" href="../css/style1.css"> -->
+
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+    <!-- Start Title -->
+    <title>Skin Desease Detection</title>
+    <!-- End Title -->
+  </head>
+  <body>
+     <!-- Start Header -->
+     <div class="navbar">
+        <!-- Start Logo -->
+        <div class="logo-sec">
+            <h1><a href="{{url_for('home')}}" class="logos">MoonSkin</a></h1>
+        </div>
+        <!-- End Logo -->
+        <!-- Start Menu -->
+        <nav>
+            <div class="menu-bar">
+                <ul class="menu-item">
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('tutorial')}}" class="sub-item">Tutorial</a></li>
+                    <li><a href="{{url_for('about')}}" class="sub-item">About</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End Menu -->
+    </div>
+    <!-- End Header -->
+    <!-- Start Main -->
+    <main>
+        <!-- Start Text -->
+        <section id="text-side">
+            <div class="box-text">
+                <div class="head">
+                    <h1>Identification<br/>Your Skin</h1>
+                </div>
+                <div class="pel">
+                    <p>Setiap orang pasti memiliki permasalahan pada kulit wajah, namun sering kali seseorang salah mengidentifikasi jenis penyakit yang sedang dialami. Mari gunakan MoonSkin untuk membantumu mengidentifikasi permasalahan pada kulit wajah anda.</p>
+                </div>
+                <div class="tom">
+                    <button class="btn"><a href="{{url_for('about')}}">Pelajari</a></button>
+                    <button class="btn"><a href="{{url_for('diagnosa')}}">Coba Sekarang</a></button>
+                </div>
+            </div>
+        </section>
+        <!-- End Text -->
+        <!-- Start Image -->
+        <section id="img-side">
+            <img class="desktop-img" src="../static/images/desktop.jpg" alt="">
+            <img class="mobile-img" src="../static/images/desktop.jpg" alt="">
+        </section>
+        <!-- End Image -->
+    </main>
+    <!-- End Main -->
+  </body>
+  </html>
