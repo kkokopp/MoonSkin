@@ -10,6 +10,7 @@ https://drive.google.com/drive/folders/1WQvjygkXbarQ-G4xF0-U2TXAl6sXt5eT?usp=sha
 
 Dataset yang digunakan merupakan data gambar dari jenis penyakit diatas dengan setiap gambar memiliki jumah 76 dan total image train adalah 3
 Sebelum melakukan deploy aplikasi download model yang ada kemudian masukan model ke dalam folder model
+
 Deskripksi 
 1. app.py berisikan flask
 2. model.py digunakan untuk memanggil model dan melakukan prediksi 
