@@ -22,3 +22,4 @@ Deskripksi
 3. folder model berisikan model yang telah ditraining
 4. templates berisikan file html dari halaman web
 5. static berisikan folder css, image, dan JavaScript
+6. File jupyter digunakan untuk membuat model dengan AI project cycle
